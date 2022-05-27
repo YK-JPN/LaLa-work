@@ -2,7 +2,7 @@ package v1;
 
 public class Mainalter {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		String[] hand= {"グー","チョキ","パー"};
 		int num;
 		int ih;
@@ -20,6 +20,7 @@ public class Mainalter {
 				break;
 			}else if((num-ih)%3==2) {
 				System.out.println("私の勝ちです。もう一度対戦しましょうか。");
+				Thread.sleep(3000);
 			}
 		}
 	}
