@@ -1,13 +1,22 @@
-package world;
+package old_until20220530;
 
 public class Hero {
-	public String name="ミナト";
-	public int hp=100;
+	public String name;
+	public int hp;
+//	public Sword sword;
 	
-	public void attack(Matango m) {
-		System.out.println(this.name+"は攻撃を仕掛けた！");
-		m.hp-=6;
-		System.out.println("5ポイントのダメージを与えた！");
+	public Hero(String name,int hp) {
+		this.name=name;
+		this.hp=hp;
+		
+	}
+	public Hero() {
+		this("ダミー",100);
+	}
+	
+	public void attack() {
+//		System.out.println(this.name+"は"+this.sword.name+"で攻撃した！");
+//		System.out.println("敵に"+this.sword.damage+"ポイントのダメージを与えた！");
 	}
 	public void sleep() {
 		this.hp=100;

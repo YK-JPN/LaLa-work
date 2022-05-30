@@ -8,9 +8,7 @@ public class Main307 {
 	public static void main(String[] args) {
 		//勇者よ、この仮想世界に生まれよ！
 		
-		Hero h=new Hero();
-		h.name="ミナト";
-		h.hp=100;
+		Hero h=new Hero("ミナト", 150);
 		System.out.println("勇者"+h.name+"を生み出しました！");
 		
 		Matango m1=new Matango();
