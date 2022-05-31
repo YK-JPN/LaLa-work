@@ -1,6 +1,6 @@
 package chap08;
 
-import world.Hero;
+import old_until20220530.Hero_ed;
 import world.Matango;
 
 public class Main307 {
@@ -8,7 +8,7 @@ public class Main307 {
 	public static void main(String[] args) {
 		//勇者よ、この仮想世界に生まれよ！
 		
-		Hero h=new Hero("ミナト", 150);
+		Hero_ed h=new Hero_ed("ミナト", 150);
 		System.out.println("勇者"+h.name+"を生み出しました！");
 		
 		Matango m1=new Matango();

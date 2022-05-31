@@ -1,16 +1,16 @@
 package old_until20220530;
 
-public class Hero {
+public class Hero_ed {
 	public String name;
 	public int hp;
 //	public Sword sword;
 	
-	public Hero(String name,int hp) {
+	public Hero_ed(String name,int hp) {
 		this.name=name;
 		this.hp=hp;
 		
 	}
-	public Hero() {
+	public Hero_ed() {
 		this("ダミー",100);
 	}
 	
