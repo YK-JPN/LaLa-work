@@ -1,6 +1,6 @@
 package world;
 
-public class Hero {
+public class Hero extends Character {
 	public String name="ミナト";
 	public int hp=100;
 	
@@ -21,5 +21,11 @@ public class Hero {
 		System.out.println(this.name+"は、逃げ出した！");
 //		System.out.println("GAMEOVER");
 //		System.out.println("最終HPは"+this.hp+"でした。");
+	}
+	@Override
+	public void sleep() {
+		System.out.println(this.name+"は眠った！");
+		System.out.println("HPが10ポイント回復した！");
+		this.hp+=10;
 	}
 }

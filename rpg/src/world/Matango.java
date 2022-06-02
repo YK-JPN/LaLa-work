@@ -10,6 +10,9 @@ public class Matango {
 		this.suffix=suffix;
 		this.type="お化け";
 	}
+	public Matango() {
+		this('S');
+	}
 	public void attack(Hero h) {
 		if(h.hp<=0) {
 			System.out.println(h.name+"は死んでいる……");
