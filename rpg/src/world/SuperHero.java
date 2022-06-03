@@ -12,14 +12,14 @@ public class SuperHero extends Hero{
 	
 	public void fly() {
 		this.flying=true;
-		System.out.println(this.name+"は飛び上がった！");
+		System.out.println(this.getName()+"は飛び上がった！");
 	}
 	public void land() {
 		this.flying=false;
-		System.out.println(this.name+"は着地した！");
+		System.out.println(this.getName()+"は着地した！");
 	}
 	public void run() {
-		System.out.println(this.name+"は、撤退した！");
-		}
+		System.out.println(this.getName()+"は、撤退した！");
+	}
 	
 }

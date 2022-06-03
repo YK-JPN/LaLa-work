@@ -9,7 +9,7 @@ public class Ex10_3 {
 	public static void main(String[] args) {
 		PoisonMatango pm=new PoisonMatango('A');
 		Hero h=new Hero("ヌカヤマ");
-		h.hp=100;
+		h.setHp(100);
 		SuperHero sh=new SuperHero("ナカヤマ");
 		pm.attack(h);
 		h.attack(pm);

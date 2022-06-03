@@ -6,4 +6,8 @@ public abstract class Monster {
 	public String name;
 	public abstract void attack();
 	public abstract void run();
+	
+//	public void run() {
+//		System.out.println("モンスターは逃げ出した！");
+//	}
 }

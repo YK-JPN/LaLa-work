@@ -9,4 +9,7 @@ public abstract class Character {
 	}
 	public abstract void attack(Matango m);
 	public abstract void sleep();
+	public void fireball(Matango m) {
+		System.out.println("袋からチャッカマンを取り出した");
+	}
 }

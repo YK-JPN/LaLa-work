@@ -10,8 +10,8 @@ public class Main362 {
 		
 //		h1.sword.name="竹光";
 		
-		System.out.println("h1:"+h1.name);
-		System.out.println("h2:"+h2.name);
+		System.out.println("h1:"+h1.getName());
+		System.out.println("h2:"+h2.getName());
 		
 //		h1.attack();
 	}
