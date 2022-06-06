@@ -13,7 +13,7 @@ public class Mainalter {
 			ih=new java.util.Scanner(System.in).nextInt()+1;
 			System.out.println("あなたの手は"+hand[ih-1]+"です。");
 			System.out.println("私の手は"+hand[num-4]+"です。");
-			if((ih-num)%3==0) {
+			if((num-ih)%3==0) {
 				System.out.println("あいこです、仕切り直しましょうか。");
 			}else if((num-ih)%3==1) {
 				System.out.println("あなたの勝ちです。対戦ありがとうございました。");

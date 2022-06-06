@@ -9,8 +9,8 @@ public class Main339 {
 		Hero h2;
 //		h2=new Hero();
 		h2=h1;
-		h2.hp=200;
-		System.out.println(h1.hp);
+		h2.setHp(200);
+		System.out.println(h1.getHp());
 
 	}
 

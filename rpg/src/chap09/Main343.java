@@ -21,7 +21,7 @@ public class Main343 {
 		System.out.println("現在の武器は"+pla1.sword.name);
 		
 		
-		pla1.attack();
+		pla1.attack(null);
 
 	}
 

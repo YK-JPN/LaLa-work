@@ -1,13 +1,10 @@
-package mainmethod;
-
-import worldview.Dog;
-import worldview.Hawk;
+package worldview;
 
 public class Main {
 
 	public static void main(String[] args) {
 		Dog dog=new Dog();
-		dog.name="イッヌ";
+		dog.setName("イッヌ");
 		dog.eat();
 		dog.run();
 		dog.roar();
@@ -17,7 +14,7 @@ public class Main {
 		
 		
 		Hawk hawk=new Hawk();
-		hawk.name="ワッシャー";
+		hawk.setName("ワッシャー");
 		hawk.eat();
 		hawk.run();
 	}

@@ -1,16 +1,78 @@
 package world;
 
-public class Wizard extends Character{
-	public int mp=260;
-	public void heal(Hero h) throws Exception {
-		h.setHp(h.getHp()+10);
-		System.out.println(this.name+"は「ヒール」を唱えた！");
-		Thread.sleep(2000);
-		System.out.println(h.getName()+"のHPを10回復した！");
-		System.out.println(h.getName()+"のHPは"+h.getHp()+"になった！");
-		Thread.sleep(1000);
+public class Wizard {
+	private int hp;
+	private int mp;
+	private String name;
+	private Wand wand;
+	public int getHp() {
+		return hp;
 	}
-	@Override
+	public void setHp(int hp) {
+		if(hp<0) {
+			this.hp=0;// この部分をhp=0;にすれば後ろのelseは必要なくなる。
+		}else {
+			this.hp = hp;
+		}
+	}
+	public int getMp() {
+		return mp;
+	}
+	public void setMp(int mp) {
+		if(mp<0) {
+			throw new IllegalArgumentException("Lack of MP !!");
+		}else {
+			this.mp = mp;
+		}
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		if(name.length()<3) {
+			throw new IllegalArgumentException("Name Error");
+		}else {
+			this.name = name;
+		}
+	}
+	public Wand getWand() {
+		return wand;
+	}
+	public void setWand(Wand wand) {
+		if(wand==null) {
+			throw new IllegalArgumentException("No Wand !!");
+		}
+			this.wand = wand;
+	}
+	public Wizard(int h,int m) {
+		this.hp=h;
+		this.mp=m;
+	}
+	public Wizard(Wand wand) {
+		this.setWand(wand);
+	}
+	
+	public Wizard(String n,int h,int m,Wand w) {
+		this.setHp(h);
+		this.setMp(m);
+		this.setName(n);
+		this.setWand(w);
+	}
+	
+	public void heal(Hero h){
+		if(this.wand.getWname()==null) {
+			throw new IllegalArgumentException("No Wand !!");
+		}else {
+			int basepoint=10;
+			int recoverpoint=(int)(basepoint*this.wand.getWpower());
+			h.setHp(h.getHp()+recoverpoint);
+			System.out.println(this.name+"は「ヒール」を唱えた！");
+			System.out.println(h.getName()+"のHPを"+recoverpoint+"回復した！");
+			System.out.println(h.getName()+"のHPは"+h.getHp()+"になった！");
+		}
+	}
+
+	
 	public void attack(Matango m) {
 		this.mp-=10;
 		m.hp-=30;
@@ -18,7 +80,7 @@ public class Wizard extends Character{
 		System.out.println("敵に30のダメージ！");
 		
 	}
-	@Override
+	
 	public void sleep() {
 		// TODO 自動生成されたメソッド・スタブ
 		

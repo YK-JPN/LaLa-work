@@ -9,6 +9,6 @@ public class Dog extends Animal{
 //		System.out.println("かわいいね");	
 //	}
 	public void roar() {
-		System.out.println(this.name+"は雄叫びを上げた！！");
+		System.out.println(this.getName()+"は雄叫びを上げた！！");
 	}
 }

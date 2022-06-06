@@ -6,8 +6,8 @@ public class Hawk extends Animal{
 //	this.agi=300;
 //	this.size=18;
 	public void run() {
-		this.hp-=20;
-		System.out.println(this.name+"は大空へと飛び上がった！");
+		this.setHp(this.getHp()-20);
+		System.out.println(this.getName()+"は大空へと飛び上がった！");
 		super.run();
 	}
 }
