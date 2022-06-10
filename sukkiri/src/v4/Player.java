@@ -38,7 +38,7 @@ public abstract class Player {
 	}
 
 	public void setHand() {
-		this.hand =nextHand.decideHand();
+		this.hand =this.nextHand.decideHand();
 	}
 
 	public String getName() {

@@ -12,6 +12,7 @@ public abstract class Player {
 		this.nextHand=neh;
 	}
 	
+	// デバッグ用に用意
 	public String toString() {
 		return this.name+":"+this.hand+":"+this.result;
 	}
@@ -37,7 +38,7 @@ public abstract class Player {
 	}
 
 	public void setHand() {
-		this.hand =nextHand.decideHand();
+		this.hand =this.nextHand.decideHand();
 	}
 
 	public String getName() {

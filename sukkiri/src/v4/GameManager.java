@@ -9,7 +9,7 @@ public class GameManager {
 		
 		System.out.println(u.getName()+"の手は"+u.getHandJp(u.getHand()));
 		System.out.println(c.getName()+"の手は"+c.getHandJp(c.getHand()));
-		System.out.print("you "+u.getResult(jn));
+		System.out.print(u.getName()+" , you "+u.getResult(jn));
 		
 //		if(jn==0) {
 //			c.setResult("draw");

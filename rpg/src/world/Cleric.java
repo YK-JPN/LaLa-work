@@ -4,12 +4,13 @@ import java.util.Random;
 
 public class Cleric {
 
-	public String name;
+	private String name;
 	int hp=50;
-	final int HP_MAX=50;
+	public final int HP_MAX=50;
 	int mp=10;
-	final int MP_MAX=10;
+	public final int MP_MAX=10;
 	
+
 	
 	/**
 	 * MPを5消費してHPを最大値まで回復する。
@@ -46,5 +47,31 @@ public class Cleric {
 		Thread.sleep(praysec*1000);
 		System.out.println("MPが"+mp_plus+"回復した！");
 		return mp_plus;
+	}
+//	@Override
+//	public int hashCode() {
+//		return Objects.hash(HP_MAX, MP_MAX, hp, mp, name);
+//	}
+//	@Override
+//	public boolean equals(Object obj) {
+//		if (this == obj)
+//			return true;
+//		if (obj == null)
+//			return false;
+//		if (getClass() != obj.getClass())
+//			return false;
+//		Cleric other = (Cleric) obj;
+//		return HP_MAX == other.HP_MAX && MP_MAX == other.MP_MAX && hp == other.hp && mp == other.mp
+//				&& Objects.equals(name, other.name);
+//	}
+	public String getName() {
+		return name;
+	}
+	@Override
+	public String toString() {
+		return "Cleric [name=" + name + ", hp=" + hp + ", HP_MAX=" + HP_MAX + ", mp=" + mp + ", MP_MAX=" + MP_MAX + "]";
+	}
+	public void setName(String name) {
+		this.name = name;
 	}
 }

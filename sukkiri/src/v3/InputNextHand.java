@@ -13,6 +13,6 @@ public class InputNextHand implements NextHand{
 		int hand=new Scanner(System.in).nextInt();
 		return hand;
 	}
-
+	// SuppresWarningsがないとEclipse上にエラー表示が出る(プログラム自体に影響はない)。
 
 }
